@@ -2,7 +2,7 @@
 
 >   LyToday是一个基于PHP开发的轻量级每日热点整合项目，旨在为用户提供一个简洁、高效，且无需数据库支持的每日资讯平台。项目采用模块化设计，每个功能都可以单独启用或禁用，方便用户根据实际需求进行定制
 
-**在线体验地址：**[https://60s.lylme.com/](https://60s.lylme.com/)
+**在线体验地址：**[https://60s.buerya.cn](https://60s.buerya.cn/)
 
 ## 功能
 
@@ -34,6 +34,31 @@
 ## 安装
 
 从[releases](https://github.com/LyLme/LyToday/releases/)下载最新版本源码上传至网站目录(`支持子目录`)，无需安装，直接访问域名即可使用。
+
+## docker 安装使用
+
+```
+# 拉取镜像
+docker pull quewen08/60s-today:latest
+
+# 创建docker-compose.yml
+
+version: '3.8'
+
+services:
+  app:
+    image: 60s-today
+    container_name: today
+    restart: always
+    ports:
+      - "80:80
+
+# 启动compose
+
+docker compose up -d .
+
+```
+
 
 ## 配置
 
